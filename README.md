@@ -76,6 +76,33 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 使用镜像centos:latest以交互模式启动一个容器,在容器内执行/bin/bash命令,并取名为mycentos
 
+
+``` C#
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
+
+namespace Ruidoo.WebMVC.Areas.edu.Models
+{
+    [Table("InterviewInfo")]
+    public class InterviewInfo
+    {
+        [Key]
+        public int id { get; set; }
+        public string title { get; set; }
+        public string context { get; set; }
+        public int times { get; set; }
+        public int isError { get; set; }
+        public int type { get; set; }
+    }
+}
+```
+
+
+
 > docker run -it --name=mycentos centos:7 /bin/bash
 
 ```java
